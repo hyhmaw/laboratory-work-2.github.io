@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма отримання даних</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #eebece;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(112, 73, 89, 0.904);
+            width: 400px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .form-container input, .form-container select, .form-container textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #5a344a;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #c76f9b;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <label for="bug-title">Bug Title *</label>
+            <input type="text" id="bug-title" required>
+
+            <label for="issue-description">Issue Description *</label>
+            <textarea id="issue-description" required></textarea>
+            
+            <label for="os">Operating System *</label>
+            <select id="os" required>
+                <option value="">-Select-</option>
+                <option value="Windows">Windows</option>
+                <option value="MacOS">MacOS</option>
+                <option value="Linux">Linux</option>
+            </select>
+            
+            <label>Browser *</label>
+            <input type="radio" name="browser" value="Internet Explorer"> Internet Explorer
+            <input type="radio" name="browser" value="Chrome"> Chrome
+            <input type="radio" name="browser" value="Firefox"> Firefox
+            <input type="radio" name="browser" value="Safari"> Safari
+            <input type="radio" name="browser" value="Opera"> Opera
+            <input type="radio" name="browser" value="Other"> Other
+            
+            <label for="assigned">Assigned To *</label>
+            <input type="text" id="assigned" required>
+            
+            <label for="priority">Priority *</label>
+            <select id="priority" required>
+                <option value="">-Select-</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            
+            <label for="screenshot">Screenshot</label>
+            <input type="file" id="screenshot">
+            
+            <label for="status">Status *</label>
+            <select id="status" required>
+                <option value="">-Select-</option>
+                <option value="Open">Open</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Closed">Closed</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
